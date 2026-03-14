@@ -1,0 +1,33 @@
+/*
+Theme Name: DS Theme
+Theme URI https://digitalschool.eu/
+Author: Trim Pervetica
+Description: A basic custom theme for learning purpouses.
+Version: 1.0
+Text Domain: ds-theme
+Tags: education, basic-theme 
+
+*/
+
+body{
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+
+}
+header {
+    background: #111;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main{
+    padding: 40px;
+}
+
+footer{
+    background: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
