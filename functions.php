@@ -55,4 +55,41 @@ function register_foo_widget(){
 
 add_action('widgets_init','register_foo_widget');
 
-?>
+
+
+
+
+
+function our_coustum_movie(){
+    $labels= array(
+        'name'                   => _x('Movies','post type general name'),
+        'singular_name'          => _x('Movies','post type general name'),
+        'add_new'                => _x('Add New','movie'),
+        'add_new_item'           => _('Add New movie'),
+        'edit_item'              => _('Edit movie'),
+        'new_item'               => _('All movie'),
+        'all_items'              => _('View movie'),
+        'view_item'              => _('View movie'),
+        'search_items'           => _('All movie'),
+        'not_found'              => _('All movie'),
+        'not_found_in_trash'     => _('All movie'),
+        'parent_item_colon'      => _('All movie'),
+        'menu_name'              => _('All movie')
+    );
+
+    $args = array(
+        'labels'            =>$labels,
+        'description'       =>'movies and single movies'
+        'public'            =>true,
+        'publicly_queryable'=>true,
+        'menu_position'     =>5,
+        'supports'          =>array('title','editor','thumbnail','excerpt','comments'),
+        'has_archive'       =>true,
+        'rewrite'           =array('slug'=>'movies'),
+        'show_in_rest'      =true
+    ):
+
+    register_post_type('movies',$args);
+
+}
+add_action('init','our_coustum_movie');
